@@ -9,8 +9,8 @@ agent {
   stages {
     stage('Checkout') {
       steps {
-        sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/nayanahg-16/Jenkins-Zero-To-Hero.git'
+        //sh 'echo passed'
+        git branch: 'main', url: 'https://github.com/nayanahg-16/Jenkins-Zero-To-Hero.git'
       }
     }
     stage('Build and Test') {
