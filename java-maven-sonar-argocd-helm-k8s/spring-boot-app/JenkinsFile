@@ -59,6 +59,8 @@ agent {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
+                    echo "===== VERIFY GIT ====="
+                    git status
                     git config user.email "nayanahg16@gmail.com"
                     git config user.name "nayanahg-16"
                     BUILD_NUMBER=${BUILD_NUMBER}
