@@ -10,7 +10,12 @@ agent {
     stage('Checkout') {
       steps {
         //sh 'echo passed'
+        checkout scm
+        sh 'ls -la'
+        sh 'git status'
         git branch: 'main', url: 'https://github.com/nayanahg-16/Jenkins-Zero-To-Hero.git'
+        sh 'ls -la'
+        sh 'git status'
       }
     }
     stage('Build and Test') {
